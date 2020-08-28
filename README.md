@@ -2,6 +2,10 @@
 
 1)final_aruba1.txt : Test Dataset
 
+Main Task: To predict activity change points in Aruba Dataset.
+
+Window size: While predicting a datapoint whether or nor it is an activity change point, in the test dataset, we have considered a fixed number of points (Window size) above and below the point which is to be predicted and compute a dot product of the probabilities of its activities which are obtained after going through Deep Learning network. The dot product is between window size set above the datapoint and the window size set below the datapoint. Our idea is that the value of the dot product if found to low increases the datapoint to be a change point of activity.
+
 2)BILSTM : Contains the CUDA code for data parallelization for various BiLstm models.
     
    BILSTM_model_aruba_10.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 10.
@@ -37,8 +41,8 @@
    
    lstm_50.cu : Cuda code which performs parallel predictions on the test data ,corresponding to a trained lstm model of window size 50.
    
-"TO compile the CUDA code ( lstm_50.cu), use the command : nvcc lstm_50.cu -std=c++11  -Xcompiler -fopenmp"
+   "TO compile the CUDA code ( lstm_50.cu), use the command : nvcc lstm_50.cu -std=c++11  -Xcompiler -fopenmp"
   
-4) cpd1.py : Python prediction code for the test data, which takes 'aruba_50_bidirectional_lstm_model.h5' ,to read the pre-trained weigths and parameters.
+4)cpd1.py : Python prediction code for the test data, which takes 'aruba_50_bidirectional_lstm_model.h5' ,to read the pre-trained weigths and parameters.
 
-5) aruba_50_bidirectional_lstm_model.h5 : Trained BiLstm network of window size 50.(the h5 files are used to read the weights and various parameters of the trained model.)
+5)aruba_50_bidirectional_lstm_model.h5 : Trained BiLstm network of window size 50.(the h5 files are used to read the weights and various parameters of the trained model.)
