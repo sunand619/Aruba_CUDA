@@ -4,15 +4,15 @@
 
 2)BILSTM : Contains the CUDA code for data parallelization for various BiLstm models.
     
-    BILSTM_model_aruba_10.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 10.
+   BILSTM_model_aruba_10.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 10.
     
-    BILSTM_model_aruba_30.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 30.
+   BILSTM_model_aruba_30.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 30.
     
-    BILSTM_model_aruba_50.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 50.
+   BILSTM_model_aruba_50.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 50.
     
-    BILSTM_model_aruba_70.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 70.
+   BILSTM_model_aruba_70.h5 : Contains the extracted weights and parameters from a trained bilstm network of window size 70.
     
-    bilstm_10.cu: Cuda code which performs parallel predictions on the test data ,corresponding to a trained bilstm model of window size 10.(Reads the weights from       BILSTM_model_aruba_10.h5) 
+   bilstm_10.cu: Cuda code which performs parallel predictions on the test data ,corresponding to a trained bilstm model of window size 10.(Reads the weights from       BILSTM_model_aruba_10.h5) 
    
    bilstm_30.cu: Cuda code which performs parallel predictions on the test data ,corresponding to a trained bilstm model of window size 30. 
    
@@ -40,4 +40,4 @@ TO compile the CUDA code ( lstm_50.cu), use the command : nvcc lstm_50.cu -std=c
   
 4) cpd1.py : Python prediction code for the test data, which takes 'aruba_50_bidirectional_lstm_model.h5' ,to read the pre-trained weigths and parameters.
 
-5) aruba_50_bidirectional_lstm_model.h5 : Trained BiLstm network of window size 50.
+5) aruba_50_bidirectional_lstm_model.h5 : Trained BiLstm network of window size 50.(the h5 files are used to read the weights and various parameters of the trained model.)
