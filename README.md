@@ -32,6 +32,7 @@
   
 
 3)LSTM : Contains the cuda code for data parallelization of lstm model.
+   
    LSTM_model_aruba_50.h5: Contains the extracted weights and parameters from a trained lstm network of window size 50.
    
    lstm_50.cu : Cuda code which performs parallel predictions on the test data ,corresponding to a trained lstm model of window size 50.
