@@ -28,7 +28,7 @@
    
    bilstm_70_multigpu.cu: Cuda code which performs parallel predictions on the test data ,corresponding to a trained bilstm model of window size 70, along with         distributing the threads across 4 gpus.
   
- TO compile the CUDA code ( say bilstm_10.cu), use the command : nvcc bilstm_10.cu -std=c++11  -Xcompiler -fopenmp
+ "TO compile the CUDA code ( say bilstm_10.cu), use the command : nvcc bilstm_10.cu -std=c++11  -Xcompiler -fopenmp"
   
 
 3)LSTM : Contains the cuda code for data parallelization of lstm model.
@@ -37,7 +37,7 @@
    
    lstm_50.cu : Cuda code which performs parallel predictions on the test data ,corresponding to a trained lstm model of window size 50.
    
-TO compile the CUDA code ( lstm_50.cu), use the command : nvcc lstm_50.cu -std=c++11  -Xcompiler -fopenmp
+"TO compile the CUDA code ( lstm_50.cu), use the command : nvcc lstm_50.cu -std=c++11  -Xcompiler -fopenmp"
   
 4) cpd1.py : Python prediction code for the test data, which takes 'aruba_50_bidirectional_lstm_model.h5' ,to read the pre-trained weigths and parameters.
 
